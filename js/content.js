@@ -56,12 +56,12 @@ chrome.storage.local.get('updates-dismissed', function (response) {
             <i class="material-icons">important_devices</i>
             <div style="flex: 1">
                 <p style="margin-bottom: 0"><b>
-                    New in Version 1.3.0
+                    Novo na versão 1.3.5
                 </b></p>
                 <ul>
-                    <li>Increased storage; track up to 50x more classes and students</li>
-                    <li>Better support for non-English names</li>
-                    <li>Visual & semantic changes</li>
+                    <li>Tradução em português</li>
+                    <li>Correções de bugs</li>
+                    <li>Melhorias no desempenho</li>
                 </ul>
             </div>
         </div>
@@ -69,11 +69,11 @@ chrome.storage.local.get('updates-dismissed', function (response) {
         <div class="updates-actions">
             <button class="view-changelog mdc-button" style="float: left">
                 <span class="mdc-button__ripple"></span>
-                <span class="mdc-button__label">View Changelog</span>
+                <span class="mdc-button__label"> </span>
             </button>
             <button class="dismiss-updates mdc-button" style="float: right">
                 <span class="mdc-button__ripple"></span>
-                <span class="mdc-button__label">Dismiss</span>
+                <span class="mdc-button__label">Ok</span>
             </button>
         </div>
     </div>`
@@ -94,16 +94,16 @@ chrome.storage.local.get('updates-dismissed', function (response) {
         <div hidden id="card-class-view">
             <div class="mdc-card-header">
                 <div>
-                    <h2 class="CkXZgc card-title">Select Class</h2>
+                    <h2 class="CkXZgc card-title">Selecionar classe</h2>
                 </div>
                 <button
                     class="mdc-icon-button medium-button material-icons right"
                     style="right: 32px"
-                    aria-label="Help"
+                    aria-label="Ajuda"
                     jscontroller="VXdfxd"
                     jsaction="mouseenter:tfO1Yc; mouseleave:JywGue;"
                     tabindex="0"
-                    data-tooltip="Help"
+                    data-tooltip="Ajuda"
                     data-tooltip-vertical-offset="-12"
                     data-tooltip-horizontal-offset="0"
                 >
@@ -111,11 +111,11 @@ chrome.storage.local.get('updates-dismissed', function (response) {
                 </button>
                 <button
                     class="mdc-icon-button medium-button material-icons right close-card"
-                    aria-label="Exit"
+                    aria-label="Sair"
                     jscontroller="VXdfxd"
                     jsaction="mouseenter:tfO1Yc; mouseleave:JywGue;"
                     tabindex="0"
-                    data-tooltip="Exit"
+                    data-tooltip="Sair"
                     data-tooltip-vertical-offset="-12"
                     data-tooltip-horizontal-offset="0"
                 >
@@ -138,7 +138,7 @@ chrome.storage.local.get('updates-dismissed', function (response) {
                     <i class="material-icons mdc-button__icon" aria-hidden="true"
                         >add</i
                     >
-                    <span class="mdc-button__label">Add Class</span>
+                    <span class="mdc-button__label">Adicionar classe</span>
                 </button>
             </div>
             <div
@@ -169,7 +169,7 @@ chrome.storage.local.get('updates-dismissed', function (response) {
                     disabled
                 >
                     <div class="mdc-button__ripple"></div>
-                    <span class="mdc-button__label">Export</span>
+                    <span class="mdc-button__label">Exportar</span>
                 </button>
             </div>
         </div>
@@ -189,7 +189,7 @@ chrome.storage.local.get('updates-dismissed', function (response) {
                                 tabindex="0"
                             >
                                 <span class="mdc-list-item__text"
-                                    >Sort by Last Name (A - Z)</span
+                                    >Sortear pelo último nome (A - Z)</span
                                 >
                             </li>
                             <li
@@ -199,7 +199,7 @@ chrome.storage.local.get('updates-dismissed', function (response) {
                                 tabindex="0"
                             >
                                 <span class="mdc-list-item__text"
-                                    >Sort by First Name (A - Z)</span
+                                    >Sortear pelo primeiro nome (A - Z)</span
                                 >
                             </li>
                             <li
@@ -209,7 +209,7 @@ chrome.storage.local.get('updates-dismissed', function (response) {
                                 tabindex="0"
                             >
                                 <span class="mdc-list-item__text"
-                                    >Sort by Presence (Present First)</span
+                                    >Sortear por presença (Primeira presença)</span
                                 >
                             </li>
                             <li
@@ -219,7 +219,7 @@ chrome.storage.local.get('updates-dismissed', function (response) {
                                 tabindex="0"
                             >
                                 <span class="mdc-list-item__text"
-                                    >Sort by Presence (Absent First)</span
+                                    >Sortear por presença (Primeiro ausente)</span
                                 >
                             </li>
                         </ul>
@@ -228,11 +228,11 @@ chrome.storage.local.get('updates-dismissed', function (response) {
                 <button
                     class="mdc-icon-button medium-button material-icons left"
                     id="default-back"
-                    aria-label="Back"
+                    aria-label="Voltar"
                     jscontroller="VXdfxd"
                     jsaction="mouseenter:tfO1Yc; mouseleave:JywGue;"
                     tabindex="0"
-                    data-tooltip="Back"
+                    data-tooltip="Voltar"
                     data-tooltip-vertical-offset="-12"
                     data-tooltip-horizontal-offset="0"
                 >
@@ -244,11 +244,11 @@ chrome.storage.local.get('updates-dismissed', function (response) {
                 <button
                     class="mdc-icon-button medium-button material-icons right more"
                     style="right: 32px"
-                    aria-label="Sort Options"
+                    aria-label="Opções de sorteio"
                     jscontroller="VXdfxd"
                     jsaction="mouseenter:tfO1Yc; mouseleave:JywGue;"
                     tabindex="0"
-                    data-tooltip="Sort Options"
+                    data-tooltip="Opções de sorteio"
                     data-tooltip-vertical-offset="-12"
                     data-tooltip-horizontal-offset="0"
                 >
@@ -256,11 +256,11 @@ chrome.storage.local.get('updates-dismissed', function (response) {
                 </button>
                 <button
                     class="mdc-icon-button medium-button material-icons right close-card"
-                    aria-label="Exit"
+                    aria-label="Sair"
                     jscontroller="VXdfxd"
                     jsaction="mouseenter:tfO1Yc; mouseleave:JywGue;"
                     tabindex="0"
-                    data-tooltip="Exit"
+                    data-tooltip="Sair"
                     data-tooltip-vertical-offset="-12"
                     data-tooltip-horizontal-offset="0"
                 >
@@ -275,9 +275,9 @@ chrome.storage.local.get('updates-dismissed', function (response) {
                         <i
                             class="material-icons mdc-button__icon"
                             aria-hidden="true"
-                            >edit</i
+                            >editar</i
                         >
-                        <span class="mdc-button__label">Edit Class</span>
+                        <span class="mdc-button__label">Editar classe</span>
                     </button>
                 </div>
                 <div class="mdc-list-divider" role="separator"></div>
@@ -288,8 +288,8 @@ chrome.storage.local.get('updates-dismissed', function (response) {
                     <div id="no-students" class="notification" style="display: none">
                         <i class="material-icons"> warning </i>
                         <p>
-                            Select edit or click the + button next to a name to add
-                            students to this class.
+                            Selecione editar ou clique no botão + ao lado de um nome para adicionar
+                        alunos para esta classe.
                         </p>
                     </div>
                     <ul
@@ -302,7 +302,7 @@ chrome.storage.local.get('updates-dismissed', function (response) {
                 role="progressbar"
                 class="mdc-linear-progress"
                 id="progress-bar"
-                aria-label="Export Progress"
+                aria-label="Progresso da Exportação"
                 aria-valuemin="0"
                 aria-valuemax="1"
                 aria-valuenow="0"
@@ -328,7 +328,7 @@ chrome.storage.local.get('updates-dismissed', function (response) {
                     id="export"
                 >
                     <div class="mdc-button__ripple"></div>
-                    <span class="mdc-button__label">Export</span>
+                    <span class="mdc-button__label">Exportar</span>
                 </button>
             </div>
         </div>
@@ -337,27 +337,27 @@ chrome.storage.local.get('updates-dismissed', function (response) {
                 <button
                     class="mdc-icon-button medium-button material-icons left"
                     id="edit-back"
-                    aria-label="Cancel"
+                    aria-label="Cancelar"
                     jscontroller="VXdfxd"
                     jsaction="mouseenter:tfO1Yc; mouseleave:JywGue;"
                     tabindex="0"
-                    data-tooltip="Cancel"
+                    data-tooltip="Cancelar"
                     data-tooltip-vertical-offset="-12"
                     data-tooltip-horizontal-offset="0"
                 >
                     arrow_back
                 </button>
                 <div>
-                    <h2 class="CkXZgc card-title">Add/Edit Class</h2>
+                    <h2 class="CkXZgc card-title">Adicionar/Editar Classe</h2>
                 </div>
                 <button
                     class="mdc-icon-button medium-button material-icons right"
                     style="right: 32px"
-                    aria-label="Help"
+                    aria-label="Ajuda"
                     jscontroller="VXdfxd"
                     jsaction="mouseenter:tfO1Yc; mouseleave:JywGue;"
                     tabindex="0"
-                    data-tooltip="Help"
+                    data-tooltip="Ajuda"
                     data-tooltip-vertical-offset="-12"
                     data-tooltip-horizontal-offset="0"
                 >
@@ -365,11 +365,11 @@ chrome.storage.local.get('updates-dismissed', function (response) {
                 </button>
                 <button
                     class="mdc-icon-button medium-button material-icons right close-card"
-                    aria-label="Exit"
+                    aria-label="Sair"
                     jscontroller="VXdfxd"
                     jsaction="mouseenter:tfO1Yc; mouseleave:JywGue;"
                     tabindex="0"
-                    data-tooltip="Exit"
+                    data-tooltip="Sair"
                     data-tooltip-vertical-offset="-12"
                     data-tooltip-horizontal-offset="0"
                 >
@@ -386,7 +386,7 @@ chrome.storage.local.get('updates-dismissed', function (response) {
                             aria-hidden="true"
                             >assignment_turned_in</i
                         >
-                        <span class="mdc-button__label">Save</span>
+                        <span class="mdc-button__label">Salvar</span>
                     </button>
                 </div>
                 <div class="mdc-list-divider" role="separator"></div>
@@ -395,7 +395,7 @@ chrome.storage.local.get('updates-dismissed', function (response) {
                     style="max-height: 50vh; overflow: auto"
                 >
                     <div class="label CkXZgc" style="margin-top: 8px">
-                        Class Name
+                        Nome da classe
                     </div>
                     <label
                         class="class-name-field mdc-text-field mdc-text-field--outlined"
@@ -406,7 +406,7 @@ chrome.storage.local.get('updates-dismissed', function (response) {
                             <span class="mdc-notched-outline__trailing"></span>
                         </span>
                     </label>
-                    <div class="label CkXZgc">Student Names</div>
+                    <div class="label CkXZgc">Nomes dos alunos</div>
                         <label
                             class="mdc-text-field mdc-text-field--outlined mdc-text-field--textarea mdc-text-field--no-label"
                         >
@@ -470,7 +470,7 @@ chrome.storage.local.get('updates-dismissed', function (response) {
                     disabled
                 >
                     <div class="mdc-button__ripple"></div>
-                    <span class="mdc-button__label">Export</span>
+                    <span class="mdc-button__label">Exportar</span>
                 </button>
             </div>
         </div>
@@ -487,14 +487,14 @@ chrome.storage.local.get('updates-dismissed', function (response) {
             >
                 <div>
                     <h2 class="mdc-dialog__title CkXZgc" id="dialog-title">
-                        Select Class
+                        Selecionar classe
                     </h2>
                     <button class="mdc-icon-button material-icons big-button right"
-                        aria-label="Help"
+                        aria-label="Ajuda"
                         jscontroller="VXdfxd"
                         jsaction="mouseenter:tfO1Yc; mouseleave:JywGue;"
                         tabindex="0"
-                        data-tooltip="Help"
+                        data-tooltip="Ajuda"
                         data-tooltip-vertical-offset="-12"
                         data-tooltip-horizontal-offset="0"
                     >
@@ -523,7 +523,7 @@ chrome.storage.local.get('updates-dismissed', function (response) {
                                 aria-hidden="true"
                                 >add</i
                             >
-                            <span class="mdc-button__label">Add Class</span>
+                            <span class="mdc-button__label">Adicionar classe</span>
                         </button>
                     </div>
                     <div class="mdc-list-divider" role="separator"></div>
@@ -535,7 +535,7 @@ chrome.storage.local.get('updates-dismissed', function (response) {
                             data-mdc-dialog-action="close"
                         >
                             <div class="mdc-button__ripple"></div>
-                            <span class="mdc-button__label">Later</span>
+                            <span class="mdc-button__label">Mais tarde</span>
                         </button>
                         <button
                             type="button"
@@ -546,7 +546,7 @@ chrome.storage.local.get('updates-dismissed', function (response) {
                             disabled
                         >
                             <div class="mdc-button__ripple"></div>
-                            <span class="mdc-button__label">Select</span>
+                            <span class="mdc-button__label">Selecionar</span>
                         </button>
                     </div>
                 </div>
@@ -690,10 +690,10 @@ chrome.storage.local.get('updates-dismissed', function (response) {
         jsaction="mouseenter:tfO1Yc; mouseleave:JywGue; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef"
         jsname="VyLmyb"
         aria-haspopup="true"
-        aria-label="Take attendance"
+        aria-label="Ajudante do Meet"
         aria-disabled="false"
         tabindex="0"
-        data-tooltip="Take attendance"
+        data-tooltip="Ajudante do Meet"
         aria-expanded="true"
         data-tab-id="0"
         data-tooltip-vertical-offset="-12"
@@ -731,7 +731,7 @@ chrome.storage.local.get('updates-dismissed', function (response) {
         <div class="mdc-snackbar__label"
             role="status"
             aria-live="polite">
-            An error occurred. Please try again later.
+            Um erro ocorreu. Por favor, tente novamente mais tarde.
         </div>
         <div class="mdc-snackbar__actions">
             <button type="button"

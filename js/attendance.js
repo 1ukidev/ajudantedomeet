@@ -645,11 +645,11 @@
             <div class="mdc-list-item__meta">
                 <button
                     class="mdc-icon-button material-icons edit-class"
-                    aria-label="Edit"
+                    aria-label="Editar"
                     jscontroller="VXdfxd"
                     jsaction="mouseenter:tfO1Yc; mouseleave:JywGue;"
                     tabindex="0"
-                    data-tooltip="Edit"
+                    data-tooltip="Editar"
                     data-tooltip-vertical-offset="-12"
                     data-tooltip-horizontal-offset="0"
                 >
@@ -657,11 +657,11 @@
                 </button>
                 <button
                     class="mdc-icon-button material-icons delete-class"
-                    aria-label="Delete"
+                    aria-label="Deletar"
                     jscontroller="VXdfxd"
                     jsaction="mouseenter:tfO1Yc; mouseleave:JywGue;"
                     tabindex="0"
-                    data-tooltip="Delete"
+                    data-tooltip="Deletar"
                     data-tooltip-vertical-offset="-12"
                     data-tooltip-horizontal-offset="0"
                 >
@@ -1033,12 +1033,12 @@
                     removeSnackbarButtons()
                     if (className === '') {
                         snackbar.labelText =
-                            'Error: The class name cannot be empty.'
+                            'Erro: o nome da classe não pode estar vazio.'
                         snackbar.close()
                         snackbar.open()
                     } else if (className.includes('§')) {
                         snackbar.labelText =
-                            'Error: The class name cannot contain the character §.'
+                            'Erro: O nome da classe não pode conter o caractere §.'
                         snackbar.close()
                         snackbar.open()
                     } else if (
@@ -1046,7 +1046,7 @@
                         className !== initClassName
                     ) {
                         snackbar.labelText =
-                            'Error: You already have a class with that name.'
+                            'Erro: você já tem uma classe com esse nome.'
                         snackbar.close()
                         snackbar.open()
                     } else {

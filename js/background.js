@@ -117,7 +117,7 @@ chrome.runtime.onConnect.addListener(function (port) {
             if (token == undefined) {
                 postMessage(port, {
                     done: true,
-                    error: 'The user did not approve access.',
+                    error: 'O usuário não aprovou o acesso.',
                     progress: 0,
                 })
             } else if (msg.data === 'export') {

@@ -833,7 +833,7 @@ function getMetaByKey(key, token, spreadsheetId) {
             } else {
                 console.log(response)
                 throw new Error(
-                    'An error occurred while accessing the spreadsheet. Please try again later.'
+                    'Ocorreu um erro ao acessar a planilha. Por favor, tente novamente mais tarde.'
                 )
             }
         } catch (error) {
@@ -862,7 +862,7 @@ function getSpreadsheet(token, spreadsheetId) {
                 resolve(data)
             } else {
                 throw new Error(
-                    'An error occurred while accessing the spreadsheet. Please try again later.'
+                    'Ocorreu um erro ao acessar a planilha. Por favor, tente novamente mais tarde.'
                 )
             }
         } catch (error) {
@@ -919,7 +919,7 @@ function batchUpdate(token, requests, spreadsheetId, sheetId = -1) {
             } else {
                 console.log(data)
                 throw new Error(
-                    'An error occurred while updating the spreadsheet. Please try again later.'
+                    'Ocorreu um erro ao atualizar a planilha. Por favor, tente novamente mais tarde.'
                 )
             }
         } catch (error) {

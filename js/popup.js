@@ -112,11 +112,11 @@ expandButton.addEventListener('click', function () {
     if (moreOptions.hidden) {
         moreOptions.hidden = false
         expandButton.querySelector('.mdc-button__label').innerHTML =
-            'Hide Advanced'
+            'Esconder avançado'
     } else {
         moreOptions.hidden = true
         expandButton.querySelector('.mdc-button__label').innerHTML =
-            'Show Advanced'
+            'Mostrar avançado'
     }
 })
 
@@ -154,7 +154,7 @@ refreshButton.addEventListener('click', function () {
                 console.log(error)
                 snackbar.close()
                 snackbar.labelText =
-                    'An error occurred while refreshing your auth token.'
+                    'Ocorreu um erro ao atualizar seu token de autenticação.'
                 snackbar.open()
                 refreshButton.disabled = false
             }
