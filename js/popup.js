@@ -143,7 +143,7 @@ refreshButton.addEventListener('click', function () {
                                 console.log(`Removed auth token ${token}.`)
                                 snackbar.close()
                                 snackbar.labelText =
-                                    'Successfully refreshed auth token.'
+                                    'Token de autenticação atualizado com sucesso.'
                                 snackbar.open()
                                 refreshButton.disabled = false
                             }
@@ -173,7 +173,7 @@ document.querySelector('#reset').addEventListener('click', function () {
 document.querySelector('#confirm-reset').addEventListener('click', function () {
     chrome.storage.local.remove('spreadsheet-id', function () {
         snackbar.close()
-        snackbar.labelText = 'Successfully unlinked spreadsheet.'
+        snackbar.labelText = 'Planilha desvinculada com sucesso.'
         snackbar.open()
         openButton.disabled = true
     })
@@ -191,7 +191,7 @@ document.querySelector('#confirm-clear').addEventListener('click', function () {
         }
         chrome.storage.local.set({ 'reset-interval': 12 })
         snackbar.close()
-        snackbar.labelText = 'Successfully cleared storage.'
+        snackbar.labelText = 'Armazenamento limpo com sucesso.'
         snackbar.open()
     })
 })

@@ -44,7 +44,7 @@ chrome.storage.local.get('updates-dismissed', function (response) {
                 data: 'instantiate',
             },
             function () {
-                Utils.log('Successfully initialized extension.')
+                Utils.log('Extensão inicializada com sucesso.')
             }
         )
     }

@@ -34,7 +34,7 @@
                                 og.call(this)
                             }
                             log(
-                                `Successfully hooked into participant data function at ${_k}.prototype.${k}.`
+                                `Conectado com sucesso à função de dados do participante em ${_k}.prototype.${k}.`
                             )
                             clearInterval(finder)
                             break outer

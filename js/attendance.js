@@ -199,7 +199,7 @@
         deleteClass(className)
         classList.selectedIndex = -1
         selectButton.disabled = true
-        snackbar.labelText = `Successfully deleted class ${className}.`
+        snackbar.labelText = `Classe excluída com sucesso ${className}.`
         removeSnackbarButtons()
         snackbar.open()
     })
@@ -241,7 +241,7 @@
                 snackbar.labelText = error
                 sbHelp.style.display = 'inline-flex'
             } else {
-                snackbar.labelText = 'Successfully exported to Google Sheets™!'
+                snackbar.labelText = 'Exportado com sucesso para o Google Sheets!'
                 sbOpen.style.display = 'inline-flex'
             }
             snackbar.close()
@@ -707,7 +707,7 @@
             }
             chrome.storage.local.set({ rosters: rostersCache }, function () {
                 forceStatusUpdate()
-                snackbar.labelText = 'Undo successful.'
+                snackbar.labelText = 'Desfeito com sucesso'
                 removeSnackbarButtons()
                 snackbar.open()
                 resolve()
@@ -1099,7 +1099,7 @@
                             selectButton.disabled = true
                         }
 
-                        snackbar.labelText = `Successfully saved class ${className}.`
+                        snackbar.labelText = `Aula salva com sucesso ${className}.`
                         snackbar.close()
                         snackbar.open()
                     }

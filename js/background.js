@@ -237,7 +237,7 @@ async function createSpreadsheet(token, className, code, port, retry) {
         }
         postMessage(port, { progress: 0.3 })
         Utils.log(
-            `Successfully created Attendance spreadsheet with id ${newSpreadsheet.spreadsheetId}.`
+            `Planilha de presença criada com sucesso, com id ${newSpreadsheet.spreadsheetId}.`
         )
         chrome.storage.local.set({
             'spreadsheet-id': newSpreadsheet.spreadsheetId,
