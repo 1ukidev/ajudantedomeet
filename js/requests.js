@@ -97,7 +97,7 @@ function createHeaders(sheetId) {
                         values: [
                             {
                                 userEnteredValue: {
-                                    stringValue: 'Last Name',
+                                    stringValue: 'Último nome',
                                 },
                                 userEnteredFormat: {
                                     horizontalAlignment: 'LEFT',
@@ -105,11 +105,11 @@ function createHeaders(sheetId) {
                                         bold: true,
                                     },
                                 },
-                                note: "The student's last name.",
+                                note: "",
                             },
                             {
                                 userEnteredValue: {
-                                    stringValue: 'First Name',
+                                    stringValue: 'Primeiro nome',
                                 },
                                 userEnteredFormat: {
                                     horizontalAlignment: 'LEFT',
@@ -117,11 +117,11 @@ function createHeaders(sheetId) {
                                         bold: true,
                                     },
                                 },
-                                note: "The student's first name.",
+                                note: "",
                             },
                             {
                                 userEnteredValue: {
-                                    stringValue: 'Present',
+                                    stringValue: 'Presente? (No/Yes)',
                                 },
                                 userEnteredFormat: {
                                     horizontalAlignment: 'CENTER',
@@ -130,11 +130,11 @@ function createHeaders(sheetId) {
                                     },
                                 },
                                 note:
-                                    'Whether or not the student appeared in the meeting.',
+                                    '',
                             },
                             {
                                 userEnteredValue: {
-                                    stringValue: 'Time In',
+                                    stringValue: 'Horário de entrada',
                                 },
                                 userEnteredFormat: {
                                     horizontalAlignment: 'RIGHT',
@@ -143,11 +143,11 @@ function createHeaders(sheetId) {
                                     },
                                 },
                                 note:
-                                    'When the student first joined the meeting, or empty if the student never joined.',
+                                    '',
                             },
                             {
                                 userEnteredValue: {
-                                    stringValue: 'Time Out',
+                                    stringValue: 'Horário de saída',
                                 },
                                 userEnteredFormat: {
                                     horizontalAlignment: 'RIGHT',
@@ -156,11 +156,11 @@ function createHeaders(sheetId) {
                                     },
                                 },
                                 note:
-                                    'When the student left the meeting, or empty if the student was in the meeting at time of export.',
+                                    '',
                             },
                             {
                                 userEnteredValue: {
-                                    stringValue: '# of Joins',
+                                    stringValue: 'Vezes que entrou',
                                 },
                                 userEnteredFormat: {
                                     horizontalAlignment: 'RIGHT',
@@ -169,11 +169,11 @@ function createHeaders(sheetId) {
                                     },
                                 },
                                 note:
-                                    'How many times the student joined the meeting.',
+                                    '',
                             },
                             {
                                 userEnteredValue: {
-                                    stringValue: 'Mins. Present',
+                                    stringValue: 'Quanto tempo passou assistindo (em minutos)',
                                 },
                                 userEnteredFormat: {
                                     horizontalAlignment: 'RIGHT',
@@ -182,7 +182,7 @@ function createHeaders(sheetId) {
                                     },
                                 },
                                 note:
-                                    'The cumulative number of minutes that the student was present in the meeting.',
+                                    '',
                             },
                         ],
                     },
@@ -191,7 +191,7 @@ function createHeaders(sheetId) {
                             {
                                 userEnteredValue: {
                                     stringValue:
-                                        'Generated by the Attendance for Google Meet™ extension.',
+                                        'Gerado por Ajudante do Meet. (github.com/1ukidev/AjudanteDoMeet)',
                                 },
                                 userEnteredFormat: {
                                     horizontalAlignment: 'CENTER',
@@ -562,7 +562,7 @@ function generateAttendanceRows(code) {
             const rawData = result[code].attendance
 
             const dts = Utils.dateTimeString(startUnix, unix)
-            const header = `${dts} (${mins} min): ${code}`
+            const header = `Informações da aula: ${dts} (${mins} min): ${code}`
             let rowData = [
                 {
                     values: [
