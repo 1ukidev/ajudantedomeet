@@ -97,7 +97,7 @@ function createHeaders(sheetId) {
                         values: [
                             {
                                 userEnteredValue: {
-                                    stringValue: 'Último nome',
+                                    stringValue: 'Primeiro nome',
                                 },
                                 userEnteredFormat: {
                                     horizontalAlignment: 'LEFT',
@@ -109,7 +109,7 @@ function createHeaders(sheetId) {
                             },
                             {
                                 userEnteredValue: {
-                                    stringValue: 'Primeiro nome',
+                                    stringValue: 'Último nome         ',
                                 },
                                 userEnteredFormat: {
                                     horizontalAlignment: 'LEFT',
@@ -118,7 +118,7 @@ function createHeaders(sheetId) {
                                     },
                                 },
                                 note: "",
-                            },
+                            },   
                             {
                                 userEnteredValue: {
                                     stringValue: 'Presente? (No/Yes)',
@@ -642,12 +642,12 @@ function generateAttendanceRows(code) {
                     values: [
                         {
                             userEnteredValue: {
-                                stringValue: lastName,
+                                stringValue: firstName,
                             },
                         },
                         {
                             userEnteredValue: {
-                                stringValue: firstName,
+                                stringValue: lastName,
                             },
                         },
                         {
@@ -822,7 +822,7 @@ function getMetaByKey(key, token, spreadsheetId) {
             )
             if (response.ok || response.status === 404) {
                 const data = await response.json()
-                Utils.log(`Get metadata for key ${key} response:`)
+                Utils.log(`Obtendo metadados para a chave  ${key} resposta:`)
                 console.log(data)
                 if (data.error) {
                     resolve(null)
@@ -892,7 +892,7 @@ function batchUpdate(token, requests, spreadsheetId, sheetId = -1) {
     if (sheetId !== -1) {
         requests.push(autoResize(sheetId))
     }
-    Utils.log('Executing batch update...')
+    Utils.log('Executando atualização em lote...')
     console.log(requests)
     return new Promise(async (resolve, reject) => {
         const body = {

@@ -192,7 +192,7 @@
     confirmDeleteDialog.listen('MDCDialog:opening', (event) => {
         document.getElementById(
             'delete-dialog-content'
-        ).textContent = `Are you sure you want to delete the class ${deleteButton.classToDelete}?`
+        ).textContent = `Tem certeza que deseja deletar a turma ${deleteButton.classToDelete}?`
     })
     deleteButton.addEventListener('click', function () {
         const className = deleteButton.classToDelete
@@ -433,7 +433,7 @@
                             color: 'yellow',
                             tooltip: 'Previously Present',
                             icon: 'watch_later',
-                            text: `Last seen at ${Utils.toTimeString(
+                            text: `Visto por último às ${Utils.toTimeString(
                                 arr[arr.length - 1]
                             )}`,
                             index: 1,
@@ -454,7 +454,7 @@
                     color: 'gray',
                     tooltip: 'Not on List',
                     icon: 'error',
-                    text: `Joined at ${Utils.toTimeString(arr[0])}`,
+                    text: `Entrou às ${Utils.toTimeString(arr[0])}`,
                     index: -1,
                 })
             }
@@ -472,7 +472,7 @@
                     color: 'red',
                     tooltip: 'Absent',
                     icon: 'cancel',
-                    text: 'Not here',
+                    text: 'Não está aqui',
                     index: 0,
                 })
             }
@@ -503,10 +503,10 @@
         for (const entry of entries) {
             if (entry.index === -1) {
                 var metaIcon = 'add_circle'
-                var metaTooltip = 'Add to Class'
+                var metaTooltip = 'Adicionar na classe'
             } else {
                 metaIcon = 'remove_circle'
-                metaTooltip = 'Remove from Class'
+                metaTooltip = 'Remover da classe'
             }
             var meta = `<div class="mdc-list-item__meta">
                 <button

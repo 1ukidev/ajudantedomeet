@@ -173,7 +173,7 @@ chrome.runtime.onConnect.addListener(function (port) {
                                 requests.push(deleteCodeMetadata(code))
                             }
                             const data = await batchUpdate(token, requests, id)
-                            Utils.log('Delete metadata response:')
+                            Utils.log('Excluir resposta de metadados:')
                             console.log(data)
                         }
                     }
@@ -190,20 +190,20 @@ function postMessage(port, message) {
 }
 
 function tryExport(token, code, port, retry = false) {
-    Utils.log('Attempting export...')
+    Utils.log('Tentando exportar...')
     chrome.storage.local.get(['spreadsheet-id', code], async function (result) {
         postMessage(port, { progress: 0 })
         const id = result['spreadsheet-id']
         if (result[code].hasOwnProperty('class')) {
             const className = result[code].class
-            Utils.log('Meet code: ' + code)
+            Utils.log('Código do Meet: ' + code)
             if (id == undefined) {
                 createSpreadsheet(token, className, code, port, retry)
             } else {
                 updateSpreadsheet(token, className, code, id, port, retry)
             }
         } else {
-            Utils.log('Cancelled export; there was no class selected.')
+            Utils.log('Exportação cancelada; nenhuma classe foi selecionada.')
         }
     })
 }
@@ -211,7 +211,7 @@ function tryExport(token, code, port, retry = false) {
 async function createSpreadsheet(token, className, code, port, retry) {
     const body = {
         properties: {
-            title: 'Attendance for Google Meet™',
+            title: 'Ajudante do Meet',
             spreadsheetTheme: getSpreadsheetTheme(),
         },
     }
@@ -226,7 +226,7 @@ async function createSpreadsheet(token, className, code, port, retry) {
     }
     let spreadsheetId = null
     let requests = []
-    Utils.log('Creating new attendance spreadsheet...')
+    Utils.log('Criação de nova planilha de presença...')
 
     try {
         const newSpreadsheet = await (
@@ -252,15 +252,15 @@ async function createSpreadsheet(token, className, code, port, retry) {
         requests = requests.concat(icReqs)
         const data = await batchUpdate(token, requests, spreadsheetId, 0)
         postMessage(port, { done: true, progress: 1 })
-        Utils.log('Initialize spreadsheet response:')
+        Utils.log('Inicializar a resposta da planilha:')
         console.log(data)
     } catch (error) {
         if (!retry && error.code === 401) {
             chrome.identity.removeCachedAuthToken(
                 { token: token },
                 function () {
-                    Utils.log('Removed cached auth token.')
-                    Utils.log('Retrying export...')
+                    Utils.log('Token de autenticação em cache removido.')
+                    Utils.log('Tentando exportar novamente...')
                     chrome.identity.getAuthToken(
                         { interactive: true },
                         function (newToken) {
@@ -288,7 +288,7 @@ async function updateSpreadsheet(
     retry = false
 ) {
     let requests = []
-    Utils.log('Updating spreadsheet...')
+    Utils.log('Atualizando planilha...')
 
     try {
         const classMeta = await getMetaByKey(className, token, spreadsheetId)
@@ -306,7 +306,7 @@ async function updateSpreadsheet(
             requests = requests.concat(addSheet(className, code, sheetId))
             requests = requests.concat(createHeaders(sheetId))
             Utils.log(
-                `Creating new sheet for class ${className}, ID ${sheetId}`
+                `Criando nova planilha para a classe ${className}, ID ${sheetId}`
             )
         } else {
             sheetId = classMeta.location.sheetId
@@ -334,13 +334,13 @@ async function updateSpreadsheet(
         requests = requests.concat(icReqs)
         let data = await batchUpdate(token, requests, spreadsheetId, sheetId)
         postMessage(port, { progress: 0.65 })
-        Utils.log('Update spreadsheet response:')
+        Utils.log('Atualização da resposta da planilha:')
         console.log(data)
         const cgReqs = await collapseGroup(token, code, spreadsheetId, sheetId)
         postMessage(port, { progress: 0.75 })
         if (cgReqs) {
             data = await batchUpdate(token, cgReqs, spreadsheetId, sheetId)
-            Utils.log('Update metadata and groups response:')
+            Utils.log('Atualizar metadados e resposta de grupos:')
             console.log(data)
         }
         postMessage(port, { done: true, progress: 1 })
@@ -349,8 +349,8 @@ async function updateSpreadsheet(
             chrome.identity.removeCachedAuthToken(
                 { token: token },
                 function () {
-                    Utils.log('Removed cached auth token.')
-                    Utils.log('Retrying export...')
+                    Utils.log('Token de autenticação em cache removido.')
+                    Utils.log('Tentando exportar novamente...')
                     chrome.identity.getAuthToken(
                         { interactive: true },
                         function (newToken) {

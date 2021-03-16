@@ -89,7 +89,7 @@ chrome.storage.local.get('updates-dismissed', function (response) {
             width: 304px;
             border-radius: 0 0 0 8px;
         "
-        aria-label="Attendance management"
+        aria-label="Gestão de presença"
         >
         <div hidden id="card-class-view">
             <div class="mdc-card-header">
@@ -302,7 +302,7 @@ chrome.storage.local.get('updates-dismissed', function (response) {
                 role="progressbar"
                 class="mdc-linear-progress"
                 id="progress-bar"
-                aria-label="Progresso da Exportação"
+                aria-label="Progresso da exportação"
                 aria-valuemin="0"
                 aria-valuemax="1"
                 aria-valuenow="0"
@@ -418,7 +418,7 @@ chrome.storage.local.get('updates-dismissed', function (response) {
                                 class="mdc-text-field__input"
                                 rows="6"
                                 cols="100"
-                                aria-label="Enter Student Names"
+                                aria-label="Digite os nomes dos alunos"
                                 aria-controls="student-helper-id"
                                 aria-describedby="student-helper-id"
                             ></textarea>
@@ -590,7 +590,7 @@ chrome.storage.local.get('updates-dismissed', function (response) {
                                 class="mdc-text-field__input"
                                 rows="6"
                                 cols="100"
-                                aria-label="Enter Student Names"
+                                aria-label="Digite os nomes dos alunos"
                                 aria-controls="student-helper-id"
                                 aria-describedby="student-helper-id"
                             ></textarea>
@@ -609,7 +609,7 @@ chrome.storage.local.get('updates-dismissed', function (response) {
                                 id="student-helper-id"
                                 aria-hidden="true"
                             >
-                                Separate names with Enter.
+                                Separe os nomes com Enter.
                             </div>
                         </div>
                     </div>
@@ -749,7 +749,7 @@ chrome.storage.local.get('updates-dismissed', function (response) {
                 style="display:none;"
             >
                 <div class="mdc-button__ripple"></div>
-                <span class="mdc-button__label">Open</span>
+                <span class="mdc-button__label">Abrir</span>
             </button>
             <button 
                 type="button" 
@@ -758,13 +758,13 @@ chrome.storage.local.get('updates-dismissed', function (response) {
                 style="display:none;"
             >
                 <div class="mdc-button__ripple"></div>
-                <span class="mdc-button__label">Undo</span>
+                <span class="mdc-button__label">Desfazer</span>
             </button>
             <button
                 class="mdc-icon-button mdc-snackbar__dismiss material-icons"
-                aria-label="Close"
+                aria-label="Fechar"
             >
-                close
+                fechar
             </button>
         </div>
         </div>
