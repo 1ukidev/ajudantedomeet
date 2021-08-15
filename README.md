@@ -1,4 +1,4 @@
-# Ajudante Do Meet
+# Ajudante do Meet
 ### Projeto descontinuado
 Código-fonte da extensão para Chrome que facilita a verificação de presença. </br>
 Aviso: Tradução incompleta </br>
