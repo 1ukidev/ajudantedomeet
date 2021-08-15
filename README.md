@@ -1,7 +1,7 @@
 # Ajudante do Meet
 ### Projeto descontinuado
-Código-fonte da extensão para o Google Chrome que facilita a verificação de presença. </br>
-Aviso: Tradução incompleta </br>
+Código-fonte da extensão para o Google Chrome que facilita a verificação de presença.</br>
+Aviso: Tradução incompleta</br>
 
-Projeto original: https://github.com/tytot/attendance-for-google-meet </br>
+Projeto original: https://github.com/tytot/attendance-for-google-meet</br>
 Créditos para Tyler Lin e Adit Bala.
